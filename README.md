@@ -11,7 +11,7 @@ Enlace al GitBook desplegado en el IAAS de la ULL [(Aitor)](http://10.6.128.132:
 
 Enlace al GitBook desplegado en el IAAS de la ULL [(Néstor)](http://10.6.128.125:8086/login)
 
-Enlace al GitBook desplegado en el IAAS de la ULL [(Omar)](TODO)
+Enlace al GitBook desplegado en el IAAS de la ULL [(Omar)](http://10.6.128.26:8088/login)
 
 # Versión HEROKU
 [Heroku](https://devcenter.heroku.com/categories/learning) es una plataforma como servicio de computación en la Nube que soporta distintos lenguajes de programación.
@@ -21,7 +21,7 @@ Enlace al GitBook desplegado en [Heroku](https://dsipractica5.herokuapp.com/logi
 
 # Versión gh-pages
 
-Enlace al libro en [gh-pages](https://ull-esit-dsi-1617.github.io/estudiar-cookies-y-sessions-en-expressjs-aitor-nestor-omar-35l2v2/)
+Enlace al libro en [gh-pages](https://ull-esit-dsi-1617.github.io/sessions-y-autenticacion-en-expressjs-aitor-nestor-omar-35l2v3/)
 
 # Versión GitBook
 
