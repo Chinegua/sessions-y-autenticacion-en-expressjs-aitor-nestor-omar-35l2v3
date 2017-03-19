@@ -7,18 +7,16 @@ Enlace al [campus virtual](https://campusvirtual.ull.es/1617/course/view.php?id=
 # Versión en IAAS
 El concepto de Infraestructura como Servicio (IaaS, Infrastructure as a Service) es uno de los tres modelos fundamentales en el campo del cloud computing, junto con el de Plataforma como Servicio (PaaS, Platform as a Service) y el de Software como Servicio (SaaS, Software as a Service).
 
-Enlace al GitBook desplegado en el IAAS de la ULL [(Aitor)](TODO)
+Enlace al GitBook desplegado en el IAAS de la ULL [(Aitor)](http://10.6.128.132:8088/login)
 
-Enlace al GitBook desplegado en el IAAS de la ULL [(Néstor)](TODO)
+Enlace al GitBook desplegado en el IAAS de la ULL [(Néstor)](http://10.6.128.125:8086/login)
 
 Enlace al GitBook desplegado en el IAAS de la ULL [(Omar)](TODO)
 
 # Versión HEROKU
 [Heroku](https://devcenter.heroku.com/categories/learning) es una plataforma como servicio de computación en la Nube que soporta distintos lenguajes de programación.
 
-Enlace al GitBook desplegado en Heroku [(Aitor)](TODO)
-Enlace al GitBook desplegado en Heroku [(Néstor)](TODO)
-Enlace al GitBook desplegado en Heroku [(Omar)](TODO)
+Enlace al GitBook desplegado en [Heroku](https://dsipractica5.herokuapp.com/login)
 
 
 # Versión gh-pages
@@ -27,7 +25,7 @@ Enlace al libro en [gh-pages](https://ull-esit-dsi-1617.github.io/estudiar-cooki
 
 # Versión GitBook
 
-Enlace al libro en [GitBook](https://ozzrocker95.gitbooks.io/estudiar-cookies-y-sessions-en-expressjs-aitor-ne/content/)
+Enlace al libro en [GitBook](https://ozzrocker95.gitbooks.io/sessions-y-autenticacion-en-expressjs-aitor-nesto/content/)
 
 # Autores
 * [Aitor Bernal Falcón](https://chinegua.github.io/)
