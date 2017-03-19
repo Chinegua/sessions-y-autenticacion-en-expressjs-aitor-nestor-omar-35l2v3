@@ -1,6 +1,11 @@
 # Práctica: Sessions y autenticacion en expressjs 
 Enlace a la [descripción de la práctica](https://casianorodriguezleon.gitbooks.io/ull-esit-1617/content/practicas/practicasessions.html)
 
+### Instrucciones de uso
+  * Para hacer login: Acceder a "/login
+  * Users y contraseñas: aitor/nestor/omar y 123aitor/nestor123/omar123
+  * Para hacer logout: Acceder a "/logout
+
 # Desarrollo de Sistemas Informáticos
 Enlace al [campus virtual](https://campusvirtual.ull.es/1617/course/view.php?id=1136)
 
