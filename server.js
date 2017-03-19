@@ -11,8 +11,6 @@ let util = require("util");
 var jsonfile = require('jsonfile')
 var bodyParser = require('body-parser');
 let bcrypt = require("bcrypt-nodejs");
-let hash = bcrypt.hashSync("aitor123");
-let user = "aitor"
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 app.set('port',(process.env.PORT || 8086));
@@ -21,8 +19,8 @@ var data = require('./users.json');
 
 //(var parsedJSON = JSON.parse(data);
 console.log(data);
-user = data.username
-hash = data.password
+let user = data.username
+let hash = data.password
 //-----------------------------------------------COOKIES Y SESSIONS
 app.use(cookieParser());
 app.use(session({
@@ -58,7 +56,7 @@ app.post('/login', function (req, res) {
     if (!req.body.username || !req.body.password) {
         console.log('login failed');
         res.send('login failed');
-    } else if (req.body.username == "aitor" && bcrypt.compareSync(req.body.password, hash)) {
+    } else if (req.body.username == user && bcrypt.compareSync(req.body.password, hash)) {
         req.session.user = req.body.username;
         req.session.admin = true;
 
