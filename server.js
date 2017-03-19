@@ -19,8 +19,7 @@ var data = require('./users.json');
 
 //(var parsedJSON = JSON.parse(data);
 console.log(data);
-let user = data.username
-let hash = data.password
+
 //-----------------------------------------------COOKIES Y SESSIONS
 app.use(cookieParser());
 app.use(session({
@@ -30,41 +29,72 @@ app.use(session({
 }));
 
 let auth = function(req, res, next) {
-    if (req.session.user == user)
+    let aux = 0;
+    for (let i = 0; i < data.length; i++) {
+        let user = data[i].username;
+        if (req.session.user == user)
+            aux = 1;
+
+    }
+    if (aux == 0){
+        return res.render('login');
+
+    }
+    else if(aux == 1){
         return next();
-    else
-        return res.render('login'); // https://httpstatuses.com/401
+    }
 };
 
 app.get('/login', function (req, res) {
-    if (req.session.user == user){
+    let aux = 0;
 
-        res.redirect('/content')
+    for (let i = 0; i < data.length; i++) {
+        let user = data[i].username;
+        let hash = data[i].password;
+        console.log(user);
+        console.log(hash);
+        if (req.session.user == user) {
+            console.log("Entra bien")
+            aux = 1;
+
+        }
+        else {
+            console.log("Entra mal")
+
+        }
     }
-    else{
+
+    if (aux == 0){
         res.render('login');
+    }
+    else if(aux == 1){
+        res.redirect('/content')
     }
 
 
 });
 
 app.post('/login', function (req, res) {
-
+    let aux = 0;
+    console.log("post de login")
     for (let i = 0; i < data.length; i++) {
-        user = data[i].username;
-        hash = data[i].password;
+        let user = data[i].username;
+        let hash = data[i].password;
     if (!req.body.username || !req.body.password) {
         console.log('login failed');
         res.send('login failed');
     } else if (req.body.username == user && bcrypt.compareSync(req.body.password, hash)) {
         req.session.user = req.body.username;
         req.session.admin = true;
-
-        res.redirect('/content')
+        aux = 1;
+        res.redirect('/content');
+        break;
 
     } else {
         console.log(`login ${util.inspect(req.body)} failed`);
-        res.send("Contraseña incorrecta");
+        if ( i == data.length -1 && aux == 0) {
+            res.send("Contraseña incorrecta");
+        }
     }
     }
 
@@ -80,25 +110,38 @@ app.get('/logout',function(req,res){
     req.session.destroy();
     res.render('logout');
 });
-
-app.get('/cpass',function(req,res){
-    res.render('cpass',{ name:req.session.user  })
-});
-
+//
+// app.get('/cpass',function(req,res){
+//     res.render('cpass',{ name:req.session.user  })
+// });
+//
 app.get('/profile',function(req,res){
+    let aux = 0;
     for (let i = 0; i < data.length;i++) {
-        user = data[i].username
+        let user = data[i].username
         if (req.session.user == user) {
-            res.render('profile', {name: req.session.user})
+            aux = 1;
         }
-        else
-            res.redirect('/login');
+    }
+
+    if (aux == 0){
+        res.redirect('/login')
+    }
+    else if(aux == 1){
+        res.render('profile', {name: req.session.user})
     }
 
 })
 
 app.post('/profile',function(req,res){
-    data.password = bcrypt.hashSync(req.body.password);
+    let aux = 0;
+    for (let i = 0; i < data.length;i++) {
+        if(req.session.user == data[i].username){
+            aux = i;
+
+        }
+    }
+    data[aux].password = bcrypt.hashSync(req.body.password);
     jsonfile.writeFile("users.json", data, {spaces: 2}, function(err) {
         console.error(err)
     })
