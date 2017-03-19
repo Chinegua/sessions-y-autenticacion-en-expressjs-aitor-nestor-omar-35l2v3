@@ -1,4 +1,4 @@
-// TODO 
+// TODO
 
 
 "use strict";
@@ -78,7 +78,7 @@ app.get('/session',function(req,res){
 
 app.get('/logout',function(req,res){
     req.session.destroy();
-    res.send('log-out done');
+    res.render('logout');
 });
 
 app.get('/cpass',function(req,res){
