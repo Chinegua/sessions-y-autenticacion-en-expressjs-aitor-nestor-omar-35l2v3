@@ -5,6 +5,7 @@ Enlace a la [descripción de la práctica](https://casianorodriguezleon.gitbooks
   * Para hacer login: Acceder a "/login
   * Users y contraseñas: aitor/nestor/omar y 123aitor/nestor123/omar123
   * Para hacer logout: Acceder a "/logout
+  * Para acceder al perfil que permite logout y cambiar la password acceder a /profile
 
 # Desarrollo de Sistemas Informáticos
 Enlace al [campus virtual](https://campusvirtual.ull.es/1617/course/view.php?id=1136)
