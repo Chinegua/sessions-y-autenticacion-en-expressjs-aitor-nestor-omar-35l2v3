@@ -50,9 +50,9 @@ app.get('/login', function (req, res) {
 
 app.post('/login', function (req, res) {
 
-
-    console.log(req.body.username);
-    console.log(req.body.password)
+    for (let i = 0; i < data.length; i++) {
+        user = data[i].username;
+        hash = data[i].password;
     if (!req.body.username || !req.body.password) {
         console.log('login failed');
         res.send('login failed');
@@ -66,9 +66,13 @@ app.post('/login', function (req, res) {
         console.log(`login ${util.inspect(req.body)} failed`);
         res.send("Contraseña incorrecta");
     }
+    }
+
 });
 app.get('/session',function(req,res){
-    res.send(req.session.user)
+
+        res.send(req.session.user)
+
 
 });
 
@@ -82,11 +86,14 @@ app.get('/cpass',function(req,res){
 });
 
 app.get('/profile',function(req,res){
-    if (req.session.user == user){
-        res.render('profile', { name : req.session.user  })
+    for (let i = 0; i < data.length;i++) {
+        user = data[i].username
+        if (req.session.user == user) {
+            res.render('profile', {name: req.session.user})
+        }
+        else
+            res.redirect('/login');
     }
-    else
-        res.redirect('/login');
 
 })
 
