@@ -37,19 +37,24 @@ let auth = function(req, res, next) {
 };
 
 app.get('/login', function (req, res) {
-    if (req.session.user == user){
 
-        res.redirect('/content')
-    }
-    else{
-        res.render('login');
+    for (let i = 0; i < data.length; i++) {
+        user = data[i].username;
+        hash = data[i].password;
+        if (req.session.user == user) {
+
+            res.redirect('/content')
+        }
+        else {
+            res.render('login');
+        }
     }
 
 
 });
 
 app.post('/login', function (req, res) {
-
+    console.log("post de login")
     for (let i = 0; i < data.length; i++) {
         user = data[i].username;
         hash = data[i].password;
