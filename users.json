@@ -1,13 +1,14 @@
-[{
-   "username": "aitor",
-   "password": "$2a$10$nsOzFQFIjLJF42CBAj43bO7m3SjLftjy0fVAdft4z7N932UfL3m6i"
-},
-{
-   "username": "nestor",
-   "password": "$2a$10$CrxkdezINnPwSjdaWQYYgeI5Lbf8lneBOpbpefVHK4yy/Bwy0YlIy"
-},
-   {
-      "username": "omar",
-      "password": "$2a$10$gRoax5ijivjS4h6sGnaCO.IUzurW5ARS9R9gWswGsrmhI1TpaebVW"
-   }]
-
+[
+  {
+    "username": "aitor",
+    "password": "$2a$10$pOtAb4JUo1wvOd5FihT68eFB4aCjZI.tuSJimq0t65tgQsyylTgti"
+  },
+  {
+    "username": "nestor",
+    "password": "$2a$10$CrxkdezINnPwSjdaWQYYgeI5Lbf8lneBOpbpefVHK4yy/Bwy0YlIy"
+  },
+  {
+    "username": "omar",
+    "password": "$2a$10$gRoax5ijivjS4h6sGnaCO.IUzurW5ARS9R9gWswGsrmhI1TpaebVW"
+  }
+]
